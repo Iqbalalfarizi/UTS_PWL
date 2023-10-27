@@ -1,4 +1,4 @@
-const dataProduct = [
+let dataProduct = [
   {
     id: 1,
     img: "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/7/3/0654fa50-001a-4484-a931-4248bd9fbebc.jpg.webp?ect=4g",

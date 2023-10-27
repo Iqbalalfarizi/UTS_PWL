@@ -1,19 +1,16 @@
-import Product from "./components/product";
-import dataProduct from "./dataProduct";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ListProduct from "./components/listProduct";
+import AddForm from "./components/formAddProduct";
 
 function App() {
   return (
-    <div className="grid grid-cols-4 p-10">
-      {dataProduct.map((data) => (
-        <Product
-          key={data.id}
-          img={data.img}
-          name={data.name}
-          price={data.price}
-          category={data.category}
-        />
-      ))}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ListProduct />} />
+        <Route path="/addProduct" element={<AddForm />} />
+      </Routes>
+    </Router>
   );
 }
 
