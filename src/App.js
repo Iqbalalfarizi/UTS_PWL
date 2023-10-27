@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Product from "./components/product";
+import dataProduct from "./dataProduct";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="grid grid-cols-4 p-10">
+      {dataProduct.map((data) => (
+        <Product
+          key={data.id}
+          img={data.img}
+          name={data.name}
+          price={data.price}
+          category={data.category}
+        />
+      ))}
     </div>
   );
 }
