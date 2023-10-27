@@ -27,6 +27,20 @@ let dataProduct = [
     price: "500.000",
     category: "international band",
   },
+  {
+    id: 4,
+    img: "https://images.tokopedia.net/img/cache/100-square/VqbcmM/2023/8/20/bd87f13c-e5db-4eea-88cd-025125c22565.jpg.webp?ect=4g",
+    name: "BMTH - Anime",
+    price: "500.000",
+    category: "international band",
+  },
+  {
+    id: 4,
+    img: "https://images.tokopedia.net/img/cache/100-square/VqbcmM/2023/8/20/bd87f13c-e5db-4eea-88cd-025125c22565.jpg.webp?ect=4g",
+    name: "BMTH - Anime",
+    price: "500.000",
+    category: "international band",
+  },
 ];
 
 export default dataProduct;
