@@ -18,7 +18,23 @@ const AddForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-}
+
+        fetch('https://653ca44fd5d6790f5ec8213d.mockapi.io/product', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Data berhasil ditambahkan:', data);
+            // Reset formulir setelah berhasil ditambahkan
+            
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
 
     return (
 
@@ -73,7 +89,7 @@ const AddForm = () => {
                         required
                     />
                 </div>
-                <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'>
+                <button onClick={handleSubmit} type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'>
                     Submit
                 </button>
             </div>
